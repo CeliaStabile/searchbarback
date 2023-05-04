@@ -12,7 +12,7 @@ router.get('/autocomplete', (req, res) => {
   fetch(`https://api.comparatrip.eu/cities/autocomplete/?q=${query}`)
     .then(response => response.json())
     .then(data => {
-      res.json({ data: data });
+      res.json({ result: data });
     });
  });
 
@@ -21,7 +21,7 @@ router.get('/autocomplete', (req, res) => {
   fetch(`https://api.comparatrip.eu/cities/popular/5`)
     .then(response => response.json())
     .then(data => {
-      res.json({ data: data });
+      res.json({ result: data });
     });
  });
 
@@ -31,7 +31,7 @@ router.get('/autocomplete', (req, res) => {
   fetch(`https://api.comparatrip.eu/cities/popular/from/${city}/5`)
     .then(response => response.json())
     .then(data => {
-      res.json({ data: data });
+      res.json({ result: data });
     });
 });
 
